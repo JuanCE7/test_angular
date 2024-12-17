@@ -1,8 +1,11 @@
 <section>
     @if(isLoggedIn){
     <p>Bienvenido {{username}} </p>
+    <img (click)="greet()" src="https://github.com/JuanCE7.png" alt="photo"/>
     } @else {
 
     <p>Inicia Sesión </p>
+    <button (click)="isLoggedIn = true">CAMBIAR</button>
     }
+
 </section>
