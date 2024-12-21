@@ -1,0 +1,12 @@
+<p>games works!</p>
+<h1>Juegos</h1>
+
+<ul>
+    @for(game of games ; track game.id){
+
+    <li (click)="fav(game.name)">
+        {{game.name}}
+
+    </li>
+    }
+</ul>
