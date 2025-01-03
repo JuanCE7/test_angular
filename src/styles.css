@@ -1,3 +1,12 @@
 :root{
     color-scheme: light dark;
+    background: rgba(14, 132, 250, 0.603);
 }
+
+main{
+    border-color: aqua;
+    background: rgba(80, 143, 238, 0.61);
+    border-radius: 25%;
+}
+
+

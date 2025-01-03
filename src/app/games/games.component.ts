@@ -17,6 +17,10 @@ export class GamesComponent {
     {
       id: '1',
       name: 'Minecraft'
+    },
+    {
+      id: '2',
+      name: 'Fornite'
     }
   ]
 }
