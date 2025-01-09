@@ -10,18 +10,18 @@ export class GamesComponent {
   @Input() username = '';
   @Output() addFavoriteEvent = new EventEmitter<string>();
 
-  fav(gameName:string){
-    this.addFavoriteEvent.emit(gameName)
+  fav(gameName: string) {
+    this.addFavoriteEvent.emit(gameName);
   }
-  
+  @Output() ngModel = '';
   games = [
     {
       id: '1',
-      name: 'Minecraft'
+      name: 'Minecraft',
     },
     {
       id: '2',
-      name: 'Fornite'
-    }
-  ]
+      name: 'Fornite',
+    },
+  ];
 }
