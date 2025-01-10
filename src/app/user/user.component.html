@@ -9,7 +9,22 @@
     }
 
     <app-games (addFavoriteEvent)="getFavorite($event)" username="{{username}}"></app-games>
-
+    <input type="text" pInputText [(ngModel)]="value" />
+    <p-iconfield>
+        <p-inputicon styleClass="pi pi-search" />
+        <input type="text" pInputText placeholder="Search" />
+    </p-iconfield>
+    <p-iconfield>
+        <input type="text" pInputText />
+        <p-inputicon styleClass="pi pi-spinner pi-spin" />
+    </p-iconfield>
+    <p-iftalabel>
+        <p-iconfield>
+            <p-inputicon class="pi pi-user" />
+            <input pInputText id="username" [(ngModel)]="value" autocomplete="off" />
+        </p-iconfield>
+        <label for="username">Username</label>
+    </p-iftalabel>
     @if(favGame !== ''){
     <h1>Tu juego favorito es {{favGame}} </h1>
     }

@@ -1,11 +1,10 @@
 import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { GamesComponent } from './games/games.component';
 import { UserComponent } from './user/user.component';
 
 export const routes: Routes = [
     {
-        path: 'cart',
+        path: 'dashboard',
         title: 'hipo',
         component: GamesComponent,
     },
