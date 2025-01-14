@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { IftaLabelModule } from 'primeng/iftalabel';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-user',
   imports: [

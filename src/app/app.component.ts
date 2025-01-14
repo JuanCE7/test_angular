@@ -1,28 +1,23 @@
-import { Component } from '@angular/core';
-import { CommentsComponent } from './comments/comments.component';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
-import { IconFieldModule } from 'primeng/iconfield';
-import { InputIconModule } from 'primeng/inputicon';
-import { IftaLabelModule } from 'primeng/iftalabel';
+import { PrimeNG } from 'primeng/config';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    CommentsComponent,
-    RouterOutlet,
-    RouterLink,
-    InputTextModule,
-    FormsModule,
-    IconFieldModule,
-    InputIconModule,
-    IftaLabelModule
-  ],
+  imports: [RouterOutlet, FormsModule, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title = 'test de test';
-  value = '';
+export class AppComponent implements OnInit {
+  constructor(private primeng: PrimeNG) {}
+
+  ngOnInit() {
+    this.primeng.zIndex = {
+      modal: 1100, // dialog, sidebar
+      overlay: 1000, // dropdown, overlaypanel
+      menu: 1000, // overlay menus
+      tooltip: 1100, // tooltip
+    };
+  }
 }
