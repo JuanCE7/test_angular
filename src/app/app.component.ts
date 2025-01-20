@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { PrimeNG } from 'primeng/config';
@@ -20,17 +20,50 @@ export class AppComponent implements OnInit {
       {
         label: 'Inicio',
         icon: 'pi pi-home',
-        routerLink: '/house',
+        routerLink: '/house'
       },
       {
         label: 'Comentarios',
-        icon: 'pi pi-comments',
-        routerLink: '/comments',
+        icon: 'pi pi-star',
+        routerLink: '/comments'
       },
       {
         label: 'Usuarios',
-        icon: 'pi pi-users',
-        routerLink: '/user',
+        icon: 'pi pi-star',
+        routerLink: '/user'
+      },
+      {
+        label: 'Projects',
+        icon: 'pi pi-search',
+        items: [
+          {
+            label: 'Components',
+            icon: 'pi pi-bolt',
+            routerLink: '/house'
+          },
+          {
+            label: 'Blocks',
+            icon: 'pi pi-server',
+          },
+          {
+            label: 'UI Kit',
+            icon: 'pi pi-pencil',
+          },
+          {
+            label: 'Templates',
+            icon: 'pi pi-palette',
+            items: [
+              {
+                label: 'Apollo',
+                icon: 'pi pi-palette',
+              },
+              {
+                label: 'Ultima',
+                icon: 'pi pi-palette',
+              },
+            ],
+          },
+        ],
       },
     ];
 

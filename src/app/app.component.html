@@ -1,2 +1,8 @@
-<p-menubar [model]="items" />
-<router-outlet />
+<div class="layout">
+    <p-menubar [model]="items" class="menubar" className="flex flex-col justify-between h-full"></p-menubar>
+    
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  
