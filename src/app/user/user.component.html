@@ -5,7 +5,7 @@
     } @else {
 
     <p>Inicia Sesión </p>
-    <button (click)="isLoggedIn = true">CAMBIAR</button>
+    <button class="primary" (click)="isLoggedIn = true">CAMBIAR</button>
     }
 
     <app-games (addFavoriteEvent)="getFavorite($event)" username="{{username}}"></app-games>
